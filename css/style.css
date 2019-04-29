@@ -1,0 +1,326 @@
+
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+body {
+  background: #fff;
+  color: #444;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  color: #007bff;
+  transition: 0.5s;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #0b6bd3;
+  outline: none;
+  text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+/* Back to top button */
+
+.back-to-top {
+  position: fixed;
+  display: none;
+  background: #007bff;
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  line-height: 1;
+  font-size: 16px;
+  border-radius: 50%;
+  right: 15px;
+  bottom: 15px;
+  transition: background 0.5s;
+  z-index: 11;
+}
+
+.back-to-top i {
+  padding-top: 12px;
+  color: #fff;
+}
+
+/* Prelaoder */
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #f2f2f2;
+  border-top: 6px solid #007bff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+#header {
+  height: 80px;
+  transition: all 0.5s;
+  z-index: 997;
+  transition: all 0.5s;
+  padding: 20px 0;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
+}
+
+#header.header-scrolled,
+#header.header-pages {
+  height: 60px;
+  padding: 10px 0;
+}
+
+#header .logo h1 {
+  font-size: 36px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#header .logo h1 a,
+#header .logo h1 a:hover {
+  color: #00366f;
+  text-decoration: none;
+}
+
+#header .logo img {
+  padding: 0;
+  margin: 7px 0;
+  max-height: 26px;
+}
+
+.main-pages {
+  margin-top: 60px;
+}
+
+/*--------------------------------------------------------------
+# Intro Section
+--------------------------------------------------------------*/
+
+#intro {
+  width: 100%;
+  position: relative;
+  background: url("../img/intro-bg.png") center bottom no-repeat;
+  background-size: cover;
+  padding: 150px 0 0 0;
+}
+
+#intro .intro-img {
+  width: 50%;
+  float: right;
+}
+
+#intro .intro-info {
+  width: 50%;
+  float: left;
+}
+
+#intro .intro-info h2 {
+  color: #fff;
+  margin-bottom: 40px;
+  font-size: 40px;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px #1f2022;
+}
+#intro .intro-info h3 {
+  color: #fff;
+  margin-bottom: 40px;
+  font-size: 30px;
+  padding: 5px 0 5px 0;
+  font-weight: 600;
+  text-shadow: 2px 2px 2px #01060f;
+}
+
+#intro .intro-info h2 span {
+  color: #74b5fc;
+  text-align: center;
+}
+
+#intro .intro-info .btn-get-started,
+#intro .intro-info .btn-services {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 0 20px 20px 0;
+  color: #fff;
+}
+
+#intro .intro-info .btn-get-started {
+  background: #007bff;
+  border: 2px solid #007bff;
+  color: #fff;
+}
+
+#intro .intro-info .btn-get-started:hover {
+  background: none;
+  border-color: #fff;
+  color: #fff;
+}
+
+#intro .intro-info .btn-services {
+  border: 2px solid #fff;
+}
+
+#intro .intro-info .btn-services:hover {
+  background: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Responsive Media Queries
+--------------------------------------------------------------*/
+
+@media (min-width: 992px) {
+  #testimonials .testimonial-item p {
+    width: 80%;
+  }
+}
+
+@media (max-width: 991px) {
+  #header {
+    height: 60px;
+    padding: 10px 0;
+  }
+
+  #header .logo h1 {
+    font-size: 28px;
+    padding: 8px 0;
+  }
+
+  #intro {
+    padding: 140px 0 60px 0;
+  }
+
+  #intro .intro-img {
+    width: 80%;
+    float: none;
+    margin: 0 auto;
+  }
+
+  #intro .intro-info {
+    width: 80%;
+    float: none;
+    margin: auto;
+    text-align: center;
+  }
+
+  #why-us .card {
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  #intro .intro-info {
+    width: 100%;
+  }
+
+  #intro .intro-info h2 {
+    font-size: 34px;
+    margin-bottom: 30px;
+  }
+
+  .section-header p {
+    width: 100%;
+  }
+
+  #testimonials .testimonial-item {
+    text-align: center;
+  }
+
+  #testimonials .testimonial-item .testimonial-img {
+    float: none;
+    margin: auto;
+  }
+
+  #testimonials .testimonial-item h3,
+  #testimonials .testimonial-item h4,
+  #testimonials .testimonial-item p {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 574px) {
+  #intro {
+    padding: 100px 0 20px 0;
+  }
+}
